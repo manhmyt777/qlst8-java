@@ -1,0 +1,4 @@
+<%@ page pageEncoding="UTF-8" %>
+<%@ include file="Header8.jspf" %>
+<p class="eyebrow">THÀNH VIÊN MỚI</p><h1>Tạo tài khoản</h1><section class="panel narrow"><form class="grid-form" method="post" action="<%=base%>/app/register"><input type="hidden" name="csrf" value="<%=csrf%>"><label>Tên đăng nhập<input name="username" type="text" required minlength="3" maxlength="50"></label><label>Mật khẩu (ít nhất 10 ký tự)<input name="password" type="password" required minlength="10" maxlength="128"></label><label>Họ và tên<input name="fullName" type="text" required maxlength="255"></label><label>Số điện thoại<input name="phone" type="tel" required maxlength="20"></label><label>Email<input name="email" type="email" maxlength="255"></label><label>Địa chỉ<input name="address" type="text" maxlength="255"></label><button>Đăng ký</button></form></section>
+<%@ include file="Footer8.jspf" %>

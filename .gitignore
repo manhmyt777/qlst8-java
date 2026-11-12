@@ -1,0 +1,14 @@
+target/
+tools/
+data/
+.env
+*.log
+.idea/
+.classpath
+.project
+.settings/
+.vscode/
+
+# Local JDK downloads are tools, not application source
+**/oracleJdk-*/
+**/jdk-*/

@@ -1,0 +1,5 @@
+<%@ page pageEncoding="UTF-8" %>
+<%@ include file="Header8.jspf" %>
+<%Item8 item=(Item8)request.getAttribute("item");%><a href="<%=base%>/app/items">← Danh mục mặt hàng</a><section class="detail panel"><div class="product-art"><strong><%=Html8.e(item.getCode())%></strong></div><div><p class="eyebrow"><%=Html8.e(item.getManufacturer())%></p><h1><%=Html8.e(item.getName())%></h1><p class="price"><%=Html8.money(item.getPrice())%></p><p><%=Html8.e(item.getSpecs())%></p><p>Bảo hành <%=item.getWarrantyPeriod()%> tháng · Tồn khả dụng <%=item.getStockQuantity()%></p>
+<%if(!me.getRole().equals("WAREHOUSE")){%><form class="inline" method="post" action="<%=base%>/app/cart-add"><input type="hidden" name="csrf" value="<%=csrf%>"><input type="hidden" name="id" value="<%=item.getId()%>"><label>Số lượng<input name="quantity" type="number" min="1" max="100000" value="1" required></label><button>Thêm vào giỏ</button></form><%}else{%><a class="button" href="<%=base%>/app/edit?id=<%=item.getId()%>">Sửa thông tin</a><%}%></div></section>
+<%@ include file="Footer8.jspf" %>

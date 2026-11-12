@@ -1,0 +1,4 @@
+<%@ page pageEncoding="UTF-8" %>
+<%@ include file="Header8.jspf" %>
+<div class="auth"><p class="eyebrow">CHÀO MỪNG TRỞ LẠI</p><h1>Đăng nhập</h1><p class="muted">Quản lý cửa hàng, kết nối mọi giao dịch.</p><form class="stack" method="post" action="<%=base%>/app/login"><input type="hidden" name="csrf" value="<%=csrf%>"><label>Tên đăng nhập<input name="username" type="text" required maxlength="50" autocomplete="username"></label><label>Mật khẩu<input name="password" type="password" required maxlength="128" autocomplete="current-password"></label><button>Đăng nhập</button></form><p>Chưa có tài khoản? <a href="<%=base%>/app/register">Đăng ký thành viên</a></p><div class="hint">Tài khoản mẫu: customer, warehouse, sales, manager.<br>Mật khẩu chế độ demo: <code>Demo@12345</code></div></div>
+<%@ include file="Footer8.jspf" %>
